@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Twitter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🐦 Agent Twitter</h1>
+            <p>AI agents having conversations in 280 characters or less</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Configuration Panel -->
+            <div class="config-panel">
+                <h2>Configuration</h2>
+                
+                <div class="config-section">
+                    <h3>Agent Management</h3>
+                    <div class="agent-creation">
+                        <div class="input-row">
+                            <input type="text" id="new-agent-name" placeholder="Agent name (e.g., 'TechGuru', 'ComedyBot')">
+                            <select id="new-agent-type">
+                                <option value="gemini">Gemini</option>
+                                <option value="claude">Claude</option>
+                            </select>
+                            <button id="add-agent" class="btn btn-primary btn-small">Add Agent</button>
+                        </div>
+                        <small style="color: #666; font-size: 0.9em; margin-top: 5px; display: block;">
+                            💡 After adding, click the ✏️ icon to customize the agent's personality!
+                        </small>
+                    </div>
+                    <div id="agents-list" class="agents-list">
+                        <!-- Dynamic agent list will be populated here -->
+                    </div>
+                </div>
+
+                <div class="config-section">
+                    <h3>Conversation Flow</h3>
+                    <div class="input-group">
+                        <label for="conversation-flow">Conversation Order:</label>
+                        <div id="conversation-flow" class="flow-container">
+                            <div class="flow-placeholder">Add agents to create a conversation flow</div>
+                        </div>
+                        <div class="flow-controls">
+                            <button id="clear-flow" class="btn btn-secondary btn-small">Clear Flow</button>
+                            <button id="randomize-flow" class="btn btn-secondary btn-small">Randomize</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="config-section">
+                    <h3>Conversation Settings</h3>
+                    <div class="input-group">
+                        <label for="max-responses">Max Responses:</label>
+                        <input type="number" id="max-responses" value="6" min="1" max="50">
+                    </div>
+                    <div class="input-group">
+                        <label for="wait-time">Wait Time Between Responses (ms):</label>
+                        <input type="number" id="wait-time" value="3000" min="1000" max="30000" step="500">
+                    </div>
+                    <div class="input-group">
+                        <label for="stop-keyword">Stop Keyword (optional):</label>
+                        <input type="text" id="stop-keyword" placeholder="e.g., 'STOP', 'END', 'FINISHED'">
+                    </div>
+                </div>
+
+                <button id="save-config" class="btn btn-secondary">Save Configuration</button>
+            </div>
+
+            <!-- Chat Interface -->
+            <div class="chat-panel">
+                <div class="chat-header">
+                    <h2>Conversation</h2>
+                    <div class="chat-controls">
+                        <button id="clear-chat" class="btn btn-secondary">Clear</button>
+                        <button id="export-chat" class="btn btn-secondary">Export</button>
+                    </div>
+                </div>
+
+                <div class="chat-messages" id="chat-messages">                <div class="welcome-message">
+                    <h3>Welcome to Agent Twitter! 🐦</h3>
+                    <p>Create AI agents with unique personalities and watch them have short, engaging conversations!</p>
+                    <p>✨ Each agent follows Twitter's 280-character limit automatically</p>
+                    <p>🎭 Customize agent personas to create different personalities and conversation styles</p>
+                    <p><strong>Note:</strong> API keys are configured via environment variables for security.</p>
+                </div>
+                </div>
+
+                <div class="chat-input-container">
+                    <div class="input-group">
+                        <textarea id="message-input" placeholder="Start the conversation... (agents will keep responses tweet-sized!)" rows="3"></textarea>
+                        <div class="chat-controls">
+                            <button id="send-message" class="btn btn-primary" disabled>Start Tweet Storm</button>
+                            <button id="terminate-conversation" class="btn btn-secondary" style="display: none;">🛑 Terminate</button>
+                        </div>
+                    </div>
+                    <div class="conversation-status" id="conversation-status"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Panel -->
+        <div class="status-panel">
+            <div class="status-item">
+                <span class="status-label">Agents:</span>
+                <span class="status-indicator" id="agents-count">⚫ 0 configured</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">Flow:</span>
+                <span class="status-indicator" id="flow-status">⚫ No flow set</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">Conversation:</span>
+                <span class="status-indicator" id="conversation-status-indicator">⚫ Ready</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="ui-controller.js"></script>
+</body>
+</html>
