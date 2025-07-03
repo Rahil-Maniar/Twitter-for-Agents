@@ -5,10 +5,10 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #333;
-    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #15202B; /* Twitter dark blue */
+    color: #FFFFFF;
+    line-height: 1.6;
 }
 
 .container {
@@ -21,27 +21,22 @@ body {
 }
 
 .header {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 30px;
+    background-color: #15202B;
+    color: #FFFFFF;
+    padding: 20px;
     text-align: center;
-    margin-bottom: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #38444d;
 }
 
 .header h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #FFFFFF;
 }
 
 .header p {
     font-size: 1.1rem;
-    color: #666;
+    color: #8899A6; /* Lighter gray for dark background */
 }
 
 .main-content {
@@ -52,8 +47,8 @@ body {
 }
 
 .config-panel {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: #192734;
+    border: 1px solid #38444d;
     border-radius: 15px;
     padding: 25px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -63,8 +58,8 @@ body {
 
 .config-panel h2 {
     margin-bottom: 20px;
-    color: #333;
-    border-bottom: 2px solid #667eea;
+    color: #FFFFFF;
+    border-bottom: 1px solid #38444d;
     padding-bottom: 10px;
 }
 
@@ -74,7 +69,7 @@ body {
 
 .config-section h3 {
     margin-bottom: 15px;
-    color: #555;
+    color: #FFFFFF;
     font-size: 1.1rem;
 }
 
@@ -86,7 +81,7 @@ body {
     display: block;
     margin-bottom: 5px;
     font-weight: 600;
-    color: #555;
+    color: #FFFFFF;
 }
 
 .input-group input,
@@ -94,19 +89,20 @@ body {
 .input-group select {
     width: 100%;
     padding: 12px;
-    border: 2px solid #e1e1e1;
+    border: 1px solid #38444d;
     border-radius: 8px;
     font-size: 14px;
     transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.9);
+    background: #253341;
+    color: #FFFFFF;
 }
 
 .input-group input:focus,
 .input-group textarea:focus,
 .input-group select:focus {
     outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    border-color: #1DA1F2;
+    box-shadow: 0 0 0 3px rgba(29, 161, 242, 0.2);
 }
 
 .input-group textarea {
@@ -115,8 +111,8 @@ body {
 }
 
 .chat-panel {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: #192734;
+    border: 1px solid #38444d;
     border-radius: 15px;
     padding: 25px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -131,11 +127,11 @@ body {
     align-items: center;
     margin-bottom: 20px;
     padding-bottom: 15px;
-    border-bottom: 2px solid #667eea;
+    border-bottom: 1px solid #38444d;
 }
 
 .chat-header h2 {
-    color: #333;
+    color: #FFFFFF;
 }
 
 .chat-messages {
@@ -145,9 +141,9 @@ body {
     max-height: calc(100vh - 400px);
     padding: 15px;
     margin-bottom: 20px;
-    background: rgba(248, 249, 250, 0.5);
+    background: #15202B;
     border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid #38444d;
 }
 
 .message {
@@ -161,17 +157,17 @@ body {
 }
 
 .message.user {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: #1DA1F2;
     color: white;
     margin-left: 10%;
     border-bottom-right-radius: 4px;
 }
 
 .message.assistant {
-    background: rgba(255, 255, 255, 0.9);
-    color: #333;
+    background: #253341;
+    color: #FFFFFF;
     margin-right: 10%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid #38444d;
     border-bottom-left-radius: 4px;
 }
 
@@ -208,11 +204,11 @@ body {
 .welcome-message {
     text-align: center;
     padding: 40px 20px;
-    color: #666;
+    color: #8899A6;
 }
 
 .welcome-message h3 {
-    color: #333;
+    color: #FFFFFF;
     margin-bottom: 15px;
 }
 
@@ -262,25 +258,24 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    min-width: 150px;
+    background-color: #1DA1F2; /* Twitter blue */
+    color: #FFFFFF;
+    border: 1px solid #1DA1F2;
 }
 
 .btn-primary:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    background-color: #0c85d0; /* Darker Twitter blue */
+    border-color: #0c85d0;
 }
 
 .btn-secondary {
-    background: rgba(108, 117, 125, 0.1);
-    color: #495057;
-    border: 1px solid rgba(108, 117, 125, 0.2);
+    background-color: transparent;
+    color: #1DA1F2;
+    border: 1px solid #1DA1F2;
 }
 
 .btn-secondary:hover:not(:disabled) {
-    background: rgba(108, 117, 125, 0.2);
-    transform: translateY(-1px);
+    background-color: rgba(29, 161, 242, 0.1);
 }
 
 #terminate-conversation {
@@ -302,10 +297,9 @@ body {
     gap: 30px;
     margin-top: 20px;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: #192734;
+    border: 1px solid #38444d;
     border-radius: 15px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .status-item {
@@ -316,7 +310,7 @@ body {
 
 .status-label {
     font-weight: 600;
-    color: #555;
+    color: #FFFFFF;
 }
 
 .status-indicator {
@@ -383,21 +377,21 @@ body {
 .agents-list {
     max-height: 300px;
     overflow-y: auto;
-    border: 1px solid #e9ecef;
+    border: 1px solid #38444d;
     border-radius: 8px;
-    background: rgba(248, 249, 250, 0.5);
+    background: #15202B;
 }
 
 .agent-item {
     display: flex;
     align-items: center;
     padding: 15px;
-    border-bottom: 1px solid #e9ecef;
+    border-bottom: 1px solid #38444d;
     transition: background-color 0.2s ease;
 }
 
 .agent-item:hover {
-    background: rgba(102, 126, 234, 0.05);
+    background: #253341;
 }
 
 .agent-item:last-child {
@@ -411,7 +405,7 @@ body {
 
 .agent-name {
     font-weight: 600;
-    color: #333;
+    color: #FFFFFF;
     margin-bottom: 4px;
     display: flex;
     align-items: center;
@@ -428,18 +422,18 @@ body {
 }
 
 .agent-type-badge.gemini {
-    background: #4285f4;
-    color: white;
+    background-color: #2F3B45;
+    color: #E1E8ED;
 }
 
 .agent-type-badge.claude {
-    background: #ff6b35;
-    color: white;
+    background-color: #4A3A3A;
+    color: #E1E8ED;
 }
 
 .agent-prompt {
     font-size: 12px;
-    color: #666;
+    color: #8899A6;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -486,20 +480,20 @@ body {
 .flow-container {
     min-height: 80px;
     padding: 15px;
-    border: 2px dashed #ddd;
+    border: 2px dashed #38444d;
     border-radius: 8px;
-    background: rgba(248, 249, 250, 0.5);
+    background: #15202B;
     transition: all 0.3s ease;
 }
 
 .flow-container.dragover {
-    border-color: #667eea;
-    background: rgba(102, 126, 234, 0.05);
+    border-color: #1DA1F2;
+    background: #192734;
 }
 
 .flow-placeholder {
     text-align: center;
-    color: #999;
+    color: #8899A6;
     font-style: italic;
     padding: 20px;
 }
@@ -507,7 +501,7 @@ body {
 .flow-item {
     display: inline-flex;
     align-items: center;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: #1DA1F2;
     color: white;
     padding: 8px 12px;
     margin: 4px;
@@ -579,7 +573,7 @@ body {
 }
 
 .modal {
-    background: white;
+    background: #192734;
     border-radius: 15px;
     padding: 30px;
     max-width: 500px;
@@ -588,12 +582,13 @@ body {
     overflow-y: auto;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     animation: slideInUp 0.3s ease;
+    color: #FFFFFF;
 }
 
 .modal h3 {
     margin-bottom: 20px;
-    color: #333;
-    border-bottom: 2px solid #667eea;
+    color: #FFFFFF;
+    border-bottom: 1px solid #38444d;
     padding-bottom: 10px;
 }
 
