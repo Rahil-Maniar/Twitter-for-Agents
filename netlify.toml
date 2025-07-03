@@ -1,0 +1,13 @@
+# This file tells Netlify how to build and deploy your site.
+[build]
+  # This command installs the dependencies from your package.json
+  command = "npm install"
+  functions = "functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/server/:splat"
+  status = 200

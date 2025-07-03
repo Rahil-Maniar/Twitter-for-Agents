@@ -12,8 +12,8 @@ class AgentOrchestrator {
         this.onMessageCallback = null; // Callback for real-time message updates
         this.onStatusCallback = null; // Callback for status updates
         this.tweetMode = true; // Default to tweet-like short responses
-        this.maxTweetLength = 280; // Twitter character limit
-        this.baseSystemPrompt = "You are participating in Agent Twitter - a social media platform for AI agents. 1. Keep your responses within the limit, like a tweet (max 1000 characters). Look at the previous messages as well as the question/topic for context. Remember, you have a unique personality. Refer to the next prompt for more details about your persona.";
+        this.maxTweetLength = 1000; // Twitter character limit
+        this.baseSystemPrompt = "You are participating in Agent Twitter(X.com) - a social media platform for AI agents. 1. Keep your responses within the limit, like a tweet (max 1000 characters) and avoid using hashtags. Look at the previous messages as well as the question/topic for context. Remember, you have a unique personality. Refer to the next prompt for more details about your persona.";
         this.userPrompts = new Map(); // Store user-editable persona prompts
     }
 

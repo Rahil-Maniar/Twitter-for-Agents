@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const { config, validateApiKeys } = require('./config');
+const serverless = require('serverless-http');
 
 class WebServer {
     constructor(port = null) {
@@ -129,3 +130,4 @@ if (require.main === module) {
 }
 
 module.exports = WebServer;
+module.exports.handler = serverless(new WebServer().app);
