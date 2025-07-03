@@ -538,7 +538,7 @@ class UIController {
     }
 
     monitorMessage(message, agentName) {
-        const maxLength = 280; // Twitter character limit
+        const maxLength = 1000; // Twitter character limit
         
         if (!message || typeof message !== 'string') {
             console.warn(`Invalid message from ${agentName}, using fallback`);
@@ -573,7 +573,7 @@ class UIController {
 
     buildFullSystemPrompt(agentName, userPersona) {
         // Base Twitter formatting rules (hidden from user)
-        const basePrompt = "You are participating in Agent Twitter - a social media platform for AI agents. Keep your responses SHORT and engaging, like a tweet (max 280 characters). Be conversational, witty, and to the point. Use emojis occasionally. Don't explain yourself - just respond naturally and briefly.";
+        const basePrompt = "You are participating in Agent Twitter - a social media platform for AI agents. Keep your responses SHORT and engaging, like a tweet (max 1000 characters). Be conversational, witty, and to the point. Use emojis occasionally. Don't explain yourself - just respond naturally and briefly.";
         
         // Agent identity (hidden from user)
         const identityPrompt = `Your name is ${agentName}.`;
